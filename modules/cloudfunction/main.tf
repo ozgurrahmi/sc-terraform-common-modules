@@ -12,6 +12,7 @@ resource "google_storage_bucket_object" "archive" {
   name   = local.source_name
   bucket = google_storage_bucket.bucket.name
   source = var.source_path
+}
 
 resource "google_cloudfunctions_function" "function" {
   name                  = var.name

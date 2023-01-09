@@ -38,3 +38,8 @@ variable "source_path" {
   type        = string
 }
 
+variable "entry_point" {
+  description = "entry point for the source code"
+  type        = string
+}
+

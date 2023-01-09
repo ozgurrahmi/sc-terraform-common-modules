@@ -21,6 +21,7 @@ resource "google_cloudfunctions_function" "function" {
   region                = var.region_id
   source_archive_bucket = google_storage_bucket.bucket.name
   source_archive_object = google_storage_bucket_object.archive.name
+  entry_point           = var.entry_point
   event_trigger {
     event_type = "google.pubsub.topic.publish"
     resource   = var.topic_name

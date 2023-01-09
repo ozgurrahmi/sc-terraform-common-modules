@@ -1,5 +1,5 @@
 locals {
-  source_name = format("%s-cf.zip", var.name)
+  source_name = format("%s-cf-%s.zip", var.name, var.env_name)
 }
 
 resource "google_storage_bucket" "bucket" {
@@ -11,8 +11,7 @@ resource "google_storage_bucket" "bucket" {
 resource "google_storage_bucket_object" "archive" {
   name   = local.source_name
   bucket = google_storage_bucket.bucket.name
-  source = local.source_name
-}
+  source = var.source_path
 
 resource "google_cloudfunctions_function" "function" {
   name                  = var.name

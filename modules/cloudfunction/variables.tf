@@ -33,3 +33,8 @@ variable "topic_name" {
   type        = string
 }
 
+variable "source_path" {
+  description = "Source address of the zip file"
+  type        = string
+}
+

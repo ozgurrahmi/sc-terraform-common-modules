@@ -7,9 +7,4 @@ resource "google_pubsub_topic" "create-topic" {
   name = local.topic_name
 }
 
-resource "google_pubsub_subscription" "create-subscription" {
-  name                 = local.subscription_name
-  topic                = google_pubsub_topic.create-topic.name
-  ack_deadline_seconds = 10
-}
 

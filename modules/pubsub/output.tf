@@ -3,8 +3,3 @@ output "topic_name" {
   value       = local.topic_name
 }
 
-output "subscription_name" {
-  description = "the name of the subscription created"
-  value       = local.subscription_name
-}
-

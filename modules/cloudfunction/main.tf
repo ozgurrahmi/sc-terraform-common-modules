@@ -4,7 +4,7 @@ locals {
 
 resource "google_storage_bucket_object" "archive" {
   name   = local.source_name
-  bucket = google_storage_bucket.bucket.name
+  bucket = var.bucket_name
   source = var.source_path
 }
 

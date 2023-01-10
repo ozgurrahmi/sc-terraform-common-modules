@@ -4,7 +4,13 @@ variable "bucket_name" {
 }
 
 variable "location" {
-  description = "Name of the bucket"
+  description = "Location of the bucket as region"
   type        = string
 }
+
+variable "project_id" {
+  description = "Project id"
+  type        = string
+}
+
 
